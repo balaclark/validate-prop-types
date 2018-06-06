@@ -1,6 +1,6 @@
 const assert = require('assert')
 const PropTypes = require('prop-types')
-const checkPropTypes = require('./checker')
+const checkPropTypes = require('../')
 
 const propTypes = {
   a: PropTypes.string.isRequired,
@@ -19,7 +19,7 @@ it('should return errors', function () {
   assert.deepEqual(actual, expected)
 })
 
-it('shouldn’t error if there were none', function () {
+it('shouldn’t return anything if there were no errors', function () {
   const validObject = { a: 'a string', b: 1, c: {} }
   const actual = checkPropTypes(propTypes, validObject, null, 'FooBar')
   const expected = undefined
