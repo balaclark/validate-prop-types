@@ -1,6 +1,6 @@
 {
   "name": "validate-prop-types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Validate React Prop Types, return errors as an object.",
   "main": "checker.js",
   "repository": "git@github.com:balaclark/validate-prop-types.git",
