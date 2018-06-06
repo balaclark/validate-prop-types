@@ -5,7 +5,7 @@ const PropTypes = require('prop-types')
 const invariant = require('fbjs/lib/invariant')
 const ReactPropTypesSecret = require('prop-types/lib/ReactPropTypesSecret')
 
-function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+function checkPropTypes(typeSpecs, values, location = 'prop', componentName = 'Component', getStack) {
   const errors = Object.keys(typeSpecs).reduce((errors, typeSpecName) => {
     if (typeSpecs.hasOwnProperty(typeSpecName)) {
       invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'the `prop-types` package, but received `%s`.', componentName || 'React class', location, typeSpecName, typeof typeSpecs[typeSpecName])
