@@ -22,15 +22,16 @@ ExampleComponent.propTypes = {
 ```js
 const assert = require('assert')
 const validatePropTypes = require('validate-prop-types')
+const ExampleComponent = require('./ExampleComponent')
 
 const data = {
   b: 'a string',
   c: 'another string'
 }
 
-assert.deepEqual(validatePropTypes(propTypes, data), {
-  a: 'The prop `a` is marked as required in `ExampleComponents`, but its value is `undefined`.',
-  b: 'Invalid prop `b` of type `string` supplied to `ExampleComponents`, expected `number`.',
-  c: 'Invalid prop `c` of type `string` supplied to `ExampleComponents`, expected `object`.'
+assert.deepEqual(validatePropTypes(ExampleComponent.propTypes, data), {
+  a: 'The prop `a` is marked as required in `Component`, but its value is `undefined`.',
+  b: 'Invalid prop `b` of type `string` supplied to `Component`, expected `number`.',
+  c: 'Invalid prop `c` of type `string` supplied to `Component`, expected `object`.'
 })
 ```
