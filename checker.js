@@ -2,7 +2,7 @@
 // and adapted to return an object of errors instead of console.warning
 
 const PropTypes = require('prop-types')
-const invariant = require('fbjs/lib/invariant')
+const invariant = require('invariant')
 const ReactPropTypesSecret = require('prop-types/lib/ReactPropTypesSecret')
 
 function checkPropTypes(typeSpecs, values, location = 'prop', componentName = 'Component', getStack) {

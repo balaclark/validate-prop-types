@@ -12,6 +12,7 @@
     "prepublish": "yarn test"
   },
   "dependencies": {
+    "invariant": "^2.2.4",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {
